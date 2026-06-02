@@ -8,8 +8,8 @@ Build a multi-agent knowledge management system using folder-based markdown with
 
 ## Steps
 
-### Phase 1: Foundation Setup
-1. **Create folder structure** — Set up PARA folders plus Inbox for unclassified items
+### Phase 1: Foundation Setup ✓ COMPLETED
+1. **✓ Create folder structure** — Set up PARA folders plus Inbox for unclassified items
    - `People/` — contacts, relationships, notes about individuals
    - `Projects/` — time-bound initiatives with goals and deadlines
    - `Areas/` — ongoing responsibilities and interests
@@ -17,55 +17,75 @@ Build a multi-agent knowledge management system using folder-based markdown with
    - `Archives/` — completed or inactive items
    - `Inbox/` — temporary holding for unclassified items
 
-2. **Create template files** — One markdown template per category showing expected structure
+2. **✓ Create template files** — One markdown template per category showing expected structure
    - `People/template-person.md` — Name, contact info, tags, notes
    - `Projects/template-project.md` — Goal, status, dates, related items
    - `Areas/template-area.md` — Scope, key notes, related projects
    - `Resources/template-resource.md` — Source, summary, tags
    - Each template includes frontmatter with metadata fields
 
-3. **Create agent configuration folder** — `.github/agents/` for workspace-scoped agents
+3. **✓ Create agent configuration folder** — `.github/agents/` for workspace-scoped agents
 
-### Phase 2: Agent Development (sequential - each depends on prior)
-4. **Create Classifier agent** — Analyzes input and determines category/tags
+### Phase 2: Agent Development ✓ COMPLETED
+4. **✓ Create Classifier agent** — Analyzes input and determines category/tags
    - Tools: `[read, search]` (read-only access)
    - Logic: Examines input, checks existing notes for similar patterns, returns category + tags + confidence
    - Output: JSON-like structure with category, filename suggestion, tags, metadata
    - Handles ambiguity: If confidence < 70%, suggests Inbox with explanation
 
-5. **Create Organizer agent** — Files content into folder structure
+5. **✓ Create Organizer agent** — Files content into folder structure
    - Tools: `[read, edit, search]` (write access)
    - Takes Classifier output and creates/updates markdown files
    - Uses templates for structure
    - Handles naming conflicts (appends date/number)
    - Creates cross-references (links between related notes)
 
-6. **Create Search agent** — Queries and retrieves knowledge
+6. **✓ Create Search agent** — Queries and retrieves knowledge
    - Tools: `[read, search]` (read-only)
    - Handles natural language queries ("everyone in NY")
    - Can search across categories
    - Supports inference (connects related information)
    - Returns formatted results with links to source files
 
-7. **Create Admin agent (entry point)** — Orchestrates workflow
+7. **✓ Create Admin agent (entry point)** — Orchestrates workflow
    - Tools: `[agent]` (orchestration only)
    - User-invocable: true (appears in agent picker)
    - Routes input through: Classifier → Organizer → confirms storage
    - Routes queries to: Search agent
    - Provides friendly feedback at each step
 
-### Phase 3: Configuration & Documentation
-8. **Create AGENTS.md** — Documents folder conventions, tagging standards, naming rules
+### Phase 3: Configuration & Documentation ✓ COMPLETED
+8. **✓ Create AGENTS.md** — Documents folder conventions, tagging standards, naming rules
    - Shared context for all agents
    - Examples of each category
    - Tag taxonomy
    - Cross-linking conventions
 
-9. **Create README.md** — User guide for the system
+9. **✓ Create README.md** — User guide for the system
    - How to add information ("@Admin Add: Rick Hodder (203) 555-1212")
    - How to search ("@Admin Find everyone in NY")
    - How to manually organize items in Inbox
    - Folder structure explanation
+
+### Phase 4: Activity Logging ✓ COMPLETED
+10. **✓ Create Logs folder** — Create directory for activity logs
+    - `Logs/` — Stores all activity and debug logs
+
+11. **✓ Update Organizer agent with logging** — Add automatic activity logging
+    - Log every file creation/update to `Logs/activity.log`
+    - Include: timestamp, action, file path, category, tags
+    - Format: Human-readable markdown entries
+
+12. **✓ Create initial log file** — Set up log structure with header
+
+### Phase 5: Search Logging ✓ COMPLETED
+13. **✓ Create search log file** — Set up log for tracking all searches
+    - `Logs/searches.log` — Stores all search queries and results count
+
+14. **✓ Update Search agent with logging** — Add automatic search logging
+    - Log every search query to `Logs/searches.log`
+    - Include: timestamp, query text, results count, categories searched
+    - Format: Human-readable entries for debugging and analytics
 
 ---
 
@@ -93,6 +113,9 @@ SimpleSecondBrain/
 │   │   ├── organizer.agent.md
 │   │   └── search.agent.md
 │   └── AGENTS.md
+├── Logs/
+│   ├── activity.log
+│   └── searches.log
 ├── People/
 │   └── template-person.md
 ├── Projects/

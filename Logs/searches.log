@@ -1,0 +1,8 @@
+# Second Brain Search Log
+
+This file automatically tracks all search queries performed by the Search agent.
+
+**Format**: `Timestamp | Query | Results Count | Categories Searched`
+
+---
+
