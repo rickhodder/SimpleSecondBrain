@@ -65,7 +65,7 @@ This is your personal second brain - a place to capture, organize, and retrieve 
 
 ### Adding Information
 
-Simply tell the **Admin** agent what you want to store. The AI will:
+Simply tell the **Brain** agent what you want to store. The AI will:
 1. Figure out which folder it belongs in
 2. Extract relevant information (tags, dates, contacts, etc.)
 3. Create a properly formatted note
@@ -74,54 +74,54 @@ Simply tell the **Admin** agent what you want to store. The AI will:
 **Examples:**
 
 ```
-@Admin Add: Rick Hodder, (203) 555-1212, lives in Connecticut
+@Brain Add: Rick Hodder, (203) 555-1212, lives in Connecticut
 
-@Admin Store this: Article about productivity - 
+@Brain Store this: Article about productivity - 
 "Getting Things Done" by David Allen
 
-@Admin New project: Launch weekly podcast by September, 
+@Brain New project: Launch weekly podcast by September, 
 need to research equipment and guests
 
-@Admin Jane Smith, jane@example.com, met at conference, 
+@Brain Jane Smith, jane@example.com, met at conference, 
 works on machine learning at TechCorp
 ```
 
 **Manual classification** (if you know where it should go):
 ```
-@Admin Add to People: John Doe, john@example.com
+@Brain Add to People: John Doe, john@example.com
 
-@Admin Create project: Website Redesign, due June 30
+@Brain Create project: Website Redesign, due June 30
 ```
 
 ### Searching Information
 
-Ask the **Admin** agent what you're looking for using natural language.
+Ask the **Brain** agent what you're looking for using natural language.
 
 **Simple searches:**
 ```
-@Admin Find everyone in New York
+@Brain Find everyone in New York
 
-@Admin Show me all active projects
+@Brain Show me all active projects
 
-@Admin What resources do I have about Python?
+@Brain What resources do I have about Python?
 ```
 
 **Connection searches:**
 ```
-@Admin What am I working on with Sarah?
+@Brain What am I working on with Sarah?
 
-@Admin Find all information about machine learning
+@Brain Find all information about machine learning
 
-@Admin Show everything related to the podcast project
+@Brain Show everything related to the podcast project
 ```
 
 **Complex queries:**
 ```
-@Admin Find people I met at conferences in 2026
+@Brain Find people I met at conferences in 2026
 
-@Admin What projects are due this month?
+@Brain What projects are due this month?
 
-@Admin Show me resources about productivity and time management
+@Brain Show me resources about productivity and time management
 ```
 
 ### Organizing the Inbox
@@ -131,21 +131,21 @@ When the AI isn't confident about classification (< 70%), items go to [Inbox/](I
 **Review weekly:**
 1. Open files in [Inbox/](Inbox/)
 2. Decide which folder they belong in
-3. Move them manually or ask Admin to reclassify with more context
+3. Move them manually or ask Brain to reclassify with more context
 4. Keep Inbox empty
 
 ---
 
 ## Behind the Scenes: The AI Agents
 
-You primarily interact with the **Admin** agent, which coordinates three specialist agents:
+You primarily interact with the **Brain** agent, which coordinates three specialist agents:
 
 - **Classifier** 🏷️ - Analyzes content and determines which folder it belongs in
 - **Organizer** 📂 - Creates and updates files in the proper structure  
 - **Search** 🔍 - Finds and retrieves information across all folders
-- **Admin** 🎯 - Your main interface, orchestrates the other agents
+- **Brain** 🎯 - Your main interface, orchestrates the other agents
 
-You don't need to know how they work - just talk to Admin naturally.
+You don't need to know how they work - just talk to Brain naturally.
 
 ---
 
@@ -296,22 +296,22 @@ The more context you provide, the better the AI can organize and connect informa
 
 1. **Add your first entry:**
    ```
-   @Admin Add: [Your name and contact info]
+   @Brain Add: [Your name and contact info]
    ```
 
 2. **Add a current project:**
    ```
-   @Admin New project: [Something you're working on]
+   @Brain New project: [Something you're working on]
    ```
 
 3. **Add someone you know:**
    ```
-   @Admin Add: [Friend/colleague name and details]
+   @Brain Add: [Friend/colleague name and details]
    ```
 
 4. **Try searching:**
    ```
-   @Admin Show me everything I've added
+   @Brain Show me everything I've added
    ```
 
 That's it! Start capturing information and let the AI help you stay organized.
@@ -320,15 +320,15 @@ That's it! Start capturing information and let the AI help you stay organized.
 
 ## Questions?
 
-Talk to the **@Admin** agent naturally. It's designed to be helpful and guide you through the system.
+Talk to the **@Brain** agent naturally. It's designed to be helpful and guide you through the system.
 
 Examples:
 ```
-@Admin How do I add a new area of responsibility?
+@Brain How do I add a new area of responsibility?
 
-@Admin Can you explain the difference between Projects and Areas?
+@Brain Can you explain the difference between Projects and Areas?
 
-@Admin Show me an example of a well-organized note
+@Brain Show me an example of a well-organized note
 ```
 
 ---
@@ -338,7 +338,7 @@ Examples:
 - **Version**: 1.0
 - **Created**: June 2026
 - **Method**: PARA (People, Projects, Areas, Resources, Archives)
-- **AI Agents**: Admin, Classifier, Organizer, Search
+- **AI Agents**: Brain, Classifier, Organizer, Search
 - **File Format**: Markdown (.md) with YAML frontmatter
 - **Agent Configuration**: [.github/agents/](.github/agents/)
 - **Shared Context**: [.github/AGENTS.md](.github/AGENTS.md)

@@ -1,6 +1,6 @@
 ---
 description: "Use when user wants to add information to their second brain or search for stored knowledge"
-name: "Admin"
+name: "Brain"
 tools: [agent]
 user-invocable: true
 ---

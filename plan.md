@@ -47,7 +47,7 @@ Build a multi-agent knowledge management system using folder-based markdown with
    - Supports inference (connects related information)
    - Returns formatted results with links to source files
 
-7. **✓ Create Admin agent (entry point)** — Orchestrates workflow
+7. **✓ Create Brain agent (entry point)** — Orchestrates workflow
    - Tools: `[agent]` (orchestration only)
    - User-invocable: true (appears in agent picker)
    - Routes input through: Classifier → Organizer → confirms storage
@@ -62,8 +62,8 @@ Build a multi-agent knowledge management system using folder-based markdown with
    - Cross-linking conventions
 
 9. **✓ Create README.md** — User guide for the system
-   - How to add information ("@Admin Add: Rick Hodder (203) 555-1212")
-   - How to search ("@Admin Find everyone in NY")
+   - How to add information ("@Brain Add: Rick Hodder (203) 555-1212")
+   - How to search ("@Brain Find everyone in NY")
    - How to manually organize items in Inbox
    - Folder structure explanation
 
@@ -92,7 +92,7 @@ Build a multi-agent knowledge management system using folder-based markdown with
 ## Relevant Files
 
 **To create:**
-- `.github/agents/admin.agent.md` — Entry point, orchestrates other agents
+- `.github/agents/admin.agent.md` (renamed to Brain) — Entry point, orchestrates other agents
 - `.github/agents/classifier.agent.md` — Categorizes and tags input
 - `.github/agents/organizer.agent.md` — Creates/updates markdown files
 - `.github/agents/search.agent.md` — Retrieves and queries knowledge
@@ -133,7 +133,7 @@ SimpleSecondBrain/
 
 ## Verification
 
-1. **Test classification** — Provide varied inputs to Admin agent, verify Classifier correctly categorizes them
+1. **Test classification** — Provide varied inputs to Brain agent, verify Classifier correctly categorizes them
 2. **Test organization** — Verify Organizer creates properly formatted files in correct folders
 3. **Test Inbox fallback** — Provide ambiguous input, confirm it goes to Inbox with explanation
 4. **Test search - simple** — "Find all projects" should return project notes
@@ -148,7 +148,7 @@ SimpleSecondBrain/
 
 **Agent Architecture:**
 - Using VS Code's built-in agent system (.agent.md files) — no MCP server initially to keep it simple
-- Admin is user-facing; others are subagents only (not directly invokable)
+- Brain is user-facing; others are subagents only (not directly invokable)
 - Single responsibility per agent with minimal tool access for focus
 
 **Folder Organization:**
@@ -157,8 +157,8 @@ SimpleSecondBrain/
 - Frontmatter in all notes for metadata (tags, dates, status)
 
 **Content Flow:**
-- **Add flow**: User → Admin → Classifier → Organizer → Confirmation
-- **Search flow**: User → Admin → Search → Results
+- **Add flow**: User → Brain → Classifier → Organizer → Confirmation
+- **Search flow**: User → Brain → Search → Results
 - **Fallback**: Low confidence → Inbox with explanation for manual review
 
 **Scope Included:**
