@@ -176,6 +176,7 @@ SimpleSecondBrain/
 - Integration with external tools (Obsidian, Notion)
 - Voice input processing
 - Image/attachment handling
+- Agent testing and evaluation using Chat Customizations Evaluations extension
 
 ---
 
@@ -194,3 +195,11 @@ SimpleSecondBrain/
 - Option A: Flat tags (#meeting, #urgent, #technical)
 - Option B: Hierarchical (#work/project, #personal/health)
 - Recommendation: **Option A** (flat) initially, easy to search and less cognitive overhead
+
+**Agent Testing & Evaluation** — Using Chat Customizations Evaluations extension
+- Purpose: Systematically test agent behavior, classification accuracy, and response quality
+- Create test cases for each agent (Classifier accuracy, Organizer file creation, Search relevance)
+- Measure confidence thresholds (is 70% the right cutoff for Inbox?)
+- Track improvements over time as the knowledge base grows
+- Extension: [Chat Customizations Evaluations](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-copilot-customization-eval)
+- Future Phase: Add comprehensive evaluation suite for all agents
