@@ -333,6 +333,61 @@ Examples:
 
 ---
 
+## Resetting Your Brain
+
+If you want to start fresh or share this system with someone else, you can reset it to an empty state using the provided reset scripts.
+
+### What Gets Reset
+
+**Removed:**
+- All user-created files in People/, Projects/, Areas/, Resources/
+- All content in Archives/ and Inbox/ (except README.md files)
+- All logged entries from activity.log and searches.log
+
+**Preserved:**
+- All template files (template-*.md)
+- README.md files in Archives/ and Inbox/
+- All agent configuration (.github/)
+- Root documentation (README.md, plan.md)
+- Log file structure (headers remain)
+
+### How to Reset
+
+**⚠️ WARNING: This operation cannot be undone!**
+
+**Strongly recommended:** Commit your changes to git before resetting!
+
+**On Windows (PowerShell):**
+```powershell
+.\reset-brain.ps1
+```
+
+**On macOS/Linux/WSL (Bash):**
+```bash
+./reset-brain.sh
+```
+
+Both scripts will:
+1. Show a clear warning about what will be deleted
+2. Ask you to type `RESET` to confirm
+3. Remove all user data while preserving system files
+4. Display a summary of what was removed
+
+**Safety Features:**
+- Confirmation prompt required (no silent deletion)
+- Clear summary of what will be removed
+- Detailed logging during execution
+- Exit codes (0 = success, 1 = errors occurred)
+
+### Use Cases
+
+- **Fresh start** - Clear all data to begin organizing again
+- **Share system** - Give someone a clean copy of your setup
+- **Testing** - Reset after experimenting with the system
+- **Before demos** - Start with clean slate for demonstrations
+
+---
+
 ## System Information
 
 - **Version**: 1.0

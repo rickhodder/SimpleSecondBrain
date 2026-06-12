@@ -87,6 +87,33 @@ Build a multi-agent knowledge management system using folder-based markdown with
     - Include: timestamp, query text, results count, categories searched
     - Format: Human-readable entries for debugging and analytics
 
+### Phase 6: Reset Functionality ✓ COMPLETED
+15. **✓ Create PowerShell reset script** — `reset-brain.ps1` for Windows/cross-platform
+    - Remove all user-created files from PARA folders
+    - Preserve template files (template-*.md) and README.md files
+    - Truncate log files (keep headers, remove entries)
+    - Confirmation prompt required (type 'RESET' to confirm)
+    - Detailed operation logging and summary
+    - Exit codes: 0 = success, 1 = errors occurred
+
+16. **✓ Create Bash reset script** — `reset-brain.sh` for macOS/Linux/WSL
+    - Identical functionality to PowerShell version
+    - Cross-platform compatibility
+    - Color-coded output for better readability
+    - Same safety measures and confirmation prompts
+
+17. **✓ Create .gitignore** — Prevent backup file commits
+    - Ignore *.backup, *.bak, *.tmp files
+    - Ignore OS-specific files (.DS_Store, Thumbs.db)
+    - Ignore editor files (.vscode, .idea, *.swp)
+
+18. **✓ Update README.md** — Document reset functionality
+    - "Resetting Your Brain" section with clear warnings
+    - What gets removed vs preserved
+    - How to use scripts on different platforms
+    - Safety features and use cases
+    - Strong recommendation to commit to git first
+
 ---
 
 ## Relevant Files
@@ -102,6 +129,9 @@ Build a multi-agent knowledge management system using folder-based markdown with
 - `Projects/template-project.md` — Project note structure
 - `Areas/template-area.md` — Area note structure
 - `Resources/template-resource.md` — Resource note structure
+- `reset-brain.ps1` — PowerShell script to reset brain to empty state
+- `reset-brain.sh` — Bash script to reset brain to empty state
+- `.gitignore` — Git ignore patterns for backup and temp files
 
 **Folder structure:**
 ```

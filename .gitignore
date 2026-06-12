@@ -1,0 +1,22 @@
+# Second Brain .gitignore
+
+# Backup files (created by reset scripts or manual backups)
+*.backup
+*.bak
+*.tmp
+*~
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.log.tmp
