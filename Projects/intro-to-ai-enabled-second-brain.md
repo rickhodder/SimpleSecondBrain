@@ -54,6 +54,9 @@ Part of the AI Learning Encouragement Presentations series. Focus on practical d
 
 These examples should help attendees understand the natural language interface and encourage them to try it themselves.
 
+### Microsoft Build Conference References
+**REMINDER**: Include links to Microsoft Build conference videos that demonstrate AI-enabled productivity tools and knowledge management concepts.
+
 ## Related
 - People: 
 - Areas: [[ai-learning-encouragement-presentations]]

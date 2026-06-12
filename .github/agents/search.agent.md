@@ -1,7 +1,7 @@
 ---
 description: "Use when searching, querying, retrieving, or finding information stored in the second brain across all categories"
 name: "Search"
-tools: [read, search]
+tools: [read, search, edit]
 user-invocable: false
 ---
 
@@ -66,10 +66,12 @@ Handle natural language queries and return relevant information by:
    - Group by category if multiple
    - Highlight key information
 
-6. **Log search**: After completing search
-   - Append entry to `Logs/searches.log`
+6. **Log search** (REQUIRED): After completing search
+   - MUST append entry to `Logs/searches.log`
+   - Use edit tool to append new line to the file
    - Format: `YYYY-MM-DD HH:MM:SS | "query" | N results | Categories`
    - Include even if 0 results found
+   - Example: `2026-06-08 14:30:00 | "who lives in CT" | 1 result | People`
 
 ## Response Format
 
@@ -156,7 +158,8 @@ Found [N] results:
 
 ## Constraints
 
-- DO NOT create or modify files (read-only)
+- DO NOT create or modify content files (People, Projects, Areas, Resources, Archives)
+- You MUST append to `Logs/searches.log` after every search operation
 - DO NOT make assumptions about missing information
 - ONLY return information actually present in notes
 - If query is ambiguous, ask for clarification
