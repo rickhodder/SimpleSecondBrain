@@ -22,7 +22,7 @@ $ConfirmPreference = "High"
 
 # Define paths
 $ScriptDir = $PSScriptRoot
-$Folders = @("People", "Projects", "Areas", "Resources", "Archives", "Inbox")
+$Folders = @("People", "Projects", "Areas", "Resources", "Ideas", "Archives", "Inbox")
 $LogFiles = @("Logs\activity.log", "Logs\searches.log")
 
 # Statistics
@@ -36,7 +36,7 @@ Write-Host "========================================`n" -ForegroundColor Yellow
 
 Write-Host "WARNING: This will permanently delete all user-generated content!" -ForegroundColor Red
 Write-Host "`nThis script will remove:" -ForegroundColor Cyan
-Write-Host "  - All non-template files from People/, Projects/, Areas/, Resources/"
+Write-Host "  - All non-template files from People/, Projects/, Areas/, Resources/, Ideas/"
 Write-Host "  - All content from Archives/ and Inbox/ (except README.md)"
 Write-Host "  - All logged entries from activity.log and searches.log"
 Write-Host "`nThis script will preserve:" -ForegroundColor Green
