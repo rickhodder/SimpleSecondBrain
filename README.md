@@ -14,7 +14,8 @@ This is your personal second brain - a place to capture, organize, and retrieve 
 ├── 🎯 Projects/      - Time-bound goals with specific outcomes  
 ├── 🔄 Areas/         - Ongoing responsibilities and interests
 ├── 📚 Resources/     - Reference material, articles, tools
-├── 📦 Archives/      - Completed or inactive items
+├── � Ideas/         - Early-stage thoughts and possibilities
+├── �📦 Archives/      - Completed or inactive items
 ├── 📥 Inbox/         - Unclassified items pending review
 └── 📋 Logs/          - Activity and search logs for debugging
 ```
@@ -42,6 +43,12 @@ This is your personal second brain - a place to capture, organize, and retrieve 
 - Tools and documentation
 - Inspiration and examples
 - Example: "Python tutorial notes", "Design inspiration collection"
+
+**Ideas** 💡 - Early-stage thoughts and possibilities
+- Quick captures of "what if" thinking
+- Embryonic concepts that haven't become projects
+- Brainstorms and exploratory ideas
+- Example: "Idea for blog post", "What if I built a...", "Been thinking about..."
 
 **Archives** 📦 - Completed or inactive
 - Finished projects
@@ -84,6 +91,10 @@ need to research equipment and guests
 
 @Brain Jane Smith, jane@example.com, met at conference, 
 works on machine learning at TechCorp
+
+@Brain Idea: What if I built an AI tool that tracks reading progress?
+
+@Brain Been thinking about starting a newsletter about productivity
 ```
 
 **Manual classification** (if you know where it should go):
@@ -91,6 +102,8 @@ works on machine learning at TechCorp
 @Brain Add to People: John Doe, john@example.com
 
 @Brain Create project: Website Redesign, due June 30
+
+@Brain Add idea: Blog post about feature toggles in modern apps
 ```
 
 ### Searching Information
@@ -212,6 +225,7 @@ Each folder has a template file showing the expected structure:
 - [Projects/template-project.md](Projects/template-project.md)
 - [Areas/template-area.md](Areas/template-area.md)
 - [Resources/template-resource.md](Resources/template-resource.md)
+- [Ideas/template-idea.md](Ideas/template-idea.md)
 
 These templates are used automatically when creating new notes.
 
@@ -340,7 +354,7 @@ If you want to start fresh or share this system with someone else, you can reset
 ### What Gets Reset
 
 **Removed:**
-- All user-created files in People/, Projects/, Areas/, Resources/
+- All user-created files in People/, Projects/, Areas/, Resources/, Ideas/
 - All content in Archives/ and Inbox/ (except README.md files)
 - All logged entries from activity.log and searches.log
 

@@ -114,6 +114,36 @@ Build a multi-agent knowledge management system using folder-based markdown with
     - Safety features and use cases
     - Strong recommendation to commit to git first
 
+### Phase 7: Ideas Category ✓ COMPLETED
+19. **✓ Create Ideas folder** — Add new category for early-stage thoughts
+    - `Ideas/` — Embryonic thoughts, possibilities, and brainstorms
+    - Distinct from Areas (active responsibilities) and Projects (committed work)
+    - Purpose: Low-friction capture for "what if" thoughts
+
+20. **✓ Create Ideas template** — Minimal structure for quick capture
+    - `Ideas/template-idea.md` — Title, initial thought, optional context/next steps
+    - Lightweight frontmatter: title, created date, tags, status (raw/developing/promoted)
+    - No required fields beyond title to minimize capture friction
+
+21. **✓ Update Classifier agent** — Add Ideas recognition patterns
+    - Recognize: "Idea:", "I have/had an idea", "What if...", "Been thinking about...", "Brainstorming:"
+    - Prioritize these patterns (especially at input start) as high-confidence Ideas signals
+    - Ideas = short, conceptual, future-oriented without concrete deadlines
+
+22. **✓ Update AGENTS.md** — Document Ideas category
+    - Add Ideas to category list with examples
+    - Clarify distinction: Ideas (possibilities) vs Areas (responsibilities) vs Projects (commitments)
+    - Document idea lifecycle: raw → developing → promoted to Project/Area
+
+23. **✓ Update README.md** — Add Ideas usage examples
+    - How to capture ideas quickly
+    - Examples: "Idea for my next blog post", "What if I built a..."
+    - How to promote ideas to projects when ready
+
+24. **✓ Update reset scripts** — Include Ideas folder in reset logic
+    - Add Ideas/ to folders that get cleaned during reset
+    - Preserve template-idea.md file
+
 ---
 
 ## Relevant Files
@@ -129,6 +159,7 @@ Build a multi-agent knowledge management system using folder-based markdown with
 - `Projects/template-project.md` — Project note structure
 - `Areas/template-area.md` — Area note structure
 - `Resources/template-resource.md` — Resource note structure
+- `Ideas/template-idea.md` — Idea note structure
 - `reset-brain.ps1` — PowerShell script to reset brain to empty state
 - `reset-brain.sh` — Bash script to reset brain to empty state
 - `.gitignore` — Git ignore patterns for backup and temp files
@@ -154,6 +185,8 @@ SimpleSecondBrain/
 │   └── template-area.md
 ├── Resources/
 │   └── template-resource.md
+├── Ideas/
+│   └── template-idea.md
 ├── Archives/
 ├── Inbox/
 └── README.md
@@ -182,7 +215,8 @@ SimpleSecondBrain/
 - Single responsibility per agent with minimal tool access for focus
 
 **Folder Organization:**
-- PARA method with explicit Inbox for ambiguous items
+- PARA method with Ideas category and explicit Inbox for ambiguous items
+- Ideas = early-stage possibilities ("what if"), distinct from Areas (ongoing responsibilities) and Projects (committed work)
 - Templates establish consistent structure
 - Frontmatter in all notes for metadata (tags, dates, status)
 

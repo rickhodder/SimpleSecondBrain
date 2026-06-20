@@ -16,6 +16,7 @@ SimpleSecondBrain/
 ├── Projects/      - Time-bound initiatives with specific goals and outcomes
 ├── Areas/         - Ongoing responsibilities, interests, standards to maintain
 ├── Resources/     - Reference material, articles, tools, external content
+├── Ideas/         - Early-stage thoughts, possibilities, embryonic concepts
 ├── Archives/      - Completed projects, inactive areas, historical information
 ├── Inbox/         - Unclassified items pending review (confidence < 70%)
 └── Logs/          - Activity logs for debugging and history tracking
@@ -46,6 +47,13 @@ SimpleSecondBrain/
 - External content: Articles, books, videos, documentation, tools
 - Learning resources: Tutorials, courses, guides
 - Examples: "Python best practices article", "Design inspiration collection", "API documentation"
+
+**Ideas** 💡
+- Early-stage: Embryonic thoughts that haven't evolved into projects
+- Possibilities: "What if" thinking, potential future directions
+- Low friction: Quick capture without extensive structure
+- Lifecycle: raw → developing → promoted to Project/Area or archived
+- Examples: "Idea for blog post on feature toggles", "What if I built a reading tracker?", "Been thinking about starting a newsletter"
 
 **Archives** 📦
 - Completed projects (moved from Projects/)
@@ -143,7 +151,7 @@ All notes must include YAML frontmatter with these fields:
 title: [Note Title]
 tags: []
 date: YYYY-MM-DD
-category: [people|projects|areas|resources]
+category: [people|projects|areas|resources|ideas]
 ---
 ```
 
@@ -175,6 +183,11 @@ status: [active|on-hold|inactive]
 source: [Author/Creator]
 source-url: [URL if applicable]
 type: [article|book|video|course|documentation|tool]
+```
+
+**Ideas:**
+```yaml
+status: [raw|developing|promoted|archived]
 ```
 
 ---
@@ -223,6 +236,7 @@ Every note should have a "Related" section listing connections:
 - Projects: [Project Name](../Projects/project-name.md)
 - Areas: [Area Name](../Areas/area-name.md)
 - Resources: [Resource Name](../Resources/resource-name.md)
+- Ideas: [Idea Name](../Ideas/idea-name.md)
 ```
 
 ---
@@ -269,6 +283,13 @@ Every note should have a "Related" section listing connections:
 - Will be consulted later but not "completed"
 - Is for learning or inspiration
 - Is a tool or collection of information
+
+**Ideas** if the content:
+- Is an early-stage thought or possibility
+- Starts with idea signals ("Idea:", "What if...", "Been thinking about...")
+- Is short and conceptual without concrete next steps
+- Represents potential future work, not committed work
+- Is exploratory or brainstorming in nature
 
 **Inbox** if:
 - Classification confidence < 70%
@@ -367,6 +388,46 @@ Decided on interview format. Equipment arrived. Working on guest list.
 - People: [Sarah Chen](../People/sarah-chen.md) (possible guest)
 - Areas: [Content Creation](../Areas/content-creation.md)
 - Resources: [Podcast Equipment Guide](../Resources/podcast-equipment-guide.md)
+```
+
+### Idea Example
+```markdown
+---
+title: AI-Powered Recipe Recommendations
+tags: [food, ai, app]
+date: 2026-06-19
+category: ideas
+status: raw
+---
+
+# AI-Powered Recipe Recommendations
+
+## Initial Thought
+What if I built a tool that recommends recipes based on what's in your pantry? 
+Use AI to suggest creative combinations and help reduce food waste.
+
+## Context
+Been thinking about this after throwing away spoiled ingredients again. 
+Existing apps require too much manual input. Could use image recognition 
+to scan pantry/fridge.
+
+## Potential
+- Help people reduce food waste
+- Learn cooking patterns over time
+- Suggest based on dietary preferences and restrictions
+- Could be a mobile app or web app
+
+## Next Steps
+- Research existing solutions (None with AI + image recognition?)
+- Talk to people about their pain points with meal planning
+- Prototype with OpenAI Vision API?
+
+## Related
+- Areas: [Cooking](../Areas/cooking.md)
+- Resources: [OpenAI Vision API Docs](../Resources/openai-vision-api.md)
+
+## Tags
+#idea #app #ai #food
 ```
 
 ---

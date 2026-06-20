@@ -18,7 +18,7 @@ set -e  # Exit on error
 
 # Script configuration
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-FOLDERS=("People" "Projects" "Areas" "Resources" "Archives" "Inbox")
+FOLDERS=("People" "Projects" "Areas" "Resources" "Ideas" "Archives" "Inbox")
 LOG_FILES=("Logs/activity.log" "Logs/searches.log")
 
 # Statistics
@@ -42,7 +42,7 @@ echo -e "${YELLOW}========================================${NC}\n"
 
 echo -e "${RED}WARNING: This will permanently delete all user-generated content!${NC}"
 echo -e "\n${CYAN}This script will remove:${NC}"
-echo "  - All non-template files from People/, Projects/, Areas/, Resources/"
+echo "  - All non-template files from People/, Projects/, Areas/, Resources/, Ideas/"
 echo "  - All content from Archives/ and Inbox/ (except README.md)"
 echo "  - All logged entries from activity.log and searches.log"
 echo -e "\n${GREEN}This script will preserve:${NC}"
