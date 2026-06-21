@@ -14,8 +14,8 @@ This is your personal second brain - a place to capture, organize, and retrieve 
 ├── 🎯 Projects/      - Time-bound goals with specific outcomes  
 ├── 🔄 Areas/         - Ongoing responsibilities and interests
 ├── 📚 Resources/     - Reference material, articles, tools
-├── � Ideas/         - Early-stage thoughts and possibilities
-├── �📦 Archives/      - Completed or inactive items
+├── 💡 Ideas/         - Early-stage thoughts and possibilities
+├── 📦 Archives/      - Completed or inactive items
 ├── 📥 Inbox/         - Unclassified items pending review
 └── 📋 Logs/          - Activity and search logs for debugging
 ```
@@ -68,6 +68,26 @@ This is your personal second brain - a place to capture, organize, and retrieve 
 
 ---
 
+## How to Activate it the First Time You Use It
+
+This simple second brain was designed as a VS Code Custom Agent (https://code.visualstudio.com/docs/agent-customization/custom-agents)
+
+This runs within VS Code, and adds an agent to the Plan/Ask/Agent in the Github Copilot Chat window.
+
+![Shows VS Code Agent Chat Drop Down ](chat-agent-dropdown.png)
+
+Go into VS Code and perform the following steps:
+
+1. Clone this repo
+2. Press ctrl-shift-p
+3. Choose Developer: Reload Window
+
+![Show  ](developer-reload-window.png)
+
+You should now see Brain in the agent dropdown.
+
+You should only need to do this once, unless you change the agents.
+
 ## How to Use It
 
 ### Adding Information
@@ -81,29 +101,26 @@ Simply tell the **Brain** agent what you want to store. The AI will:
 **Examples:**
 
 ```
-@Brain Add: Rick Hodder, (203) 555-1212, lives in Connecticut
+Add Rick Hodder, (203) 555-1212, lives in Connecticut
 
-@Brain Store this: Article about productivity - 
-"Getting Things Done" by David Allen
+Store this: Article about productivity - "Getting Things Done" by David Allen
 
-@Brain New project: Launch weekly podcast by September, 
-need to research equipment and guests
+New project: Launch weekly podcast by September, need to research equipment and guests
 
-@Brain Jane Smith, jane@example.com, met at conference, 
-works on machine learning at TechCorp
+Jane Smith, jane@example.com, met at conference, works on machine learning at TechCorp
 
-@Brain Idea: What if I built an AI tool that tracks reading progress?
+What if I built an AI tool that tracks reading progress?
 
-@Brain Been thinking about starting a newsletter about productivity
+Been thinking about starting a newsletter about productivity
 ```
 
 **Manual classification** (if you know where it should go):
 ```
-@Brain Add to People: John Doe, john@example.com
+Add to People: John Doe, john@example.com
 
-@Brain Create project: Website Redesign, due June 30
+Create project: Website Redesign, due June 30
 
-@Brain Add idea: Blog post about feature toggles in modern apps
+Add idea: Blog post about feature toggles in modern apps
 ```
 
 ### Searching Information
@@ -112,29 +129,29 @@ Ask the **Brain** agent what you're looking for using natural language.
 
 **Simple searches:**
 ```
-@Brain Find everyone in New York
+Find everyone in New York
 
-@Brain Show me all active projects
+Show me all active projects
 
-@Brain What resources do I have about Python?
+What resources do I have about Python?
 ```
 
 **Connection searches:**
 ```
-@Brain What am I working on with Sarah?
+What am I working on with Sarah?
 
-@Brain Find all information about machine learning
+Find all information about machine learning
 
-@Brain Show everything related to the podcast project
+Show everything related to the podcast project
 ```
 
 **Complex queries:**
 ```
-@Brain Find people I met at conferences in 2026
+Find people I met at conferences in 2026
 
-@Brain What projects are due this month?
+What projects are due this month?
 
-@Brain Show me resources about productivity and time management
+Show me resources about productivity and time management
 ```
 
 ### Organizing the Inbox
@@ -310,22 +327,22 @@ The more context you provide, the better the AI can organize and connect informa
 
 1. **Add your first entry:**
    ```
-   @Brain Add: [Your name and contact info]
+   Add: [Your name and contact info]
    ```
 
 2. **Add a current project:**
    ```
-   @Brain New project: [Something you're working on]
+   New project: [Something you're working on]
    ```
 
 3. **Add someone you know:**
    ```
-   @Brain Add: [Friend/colleague name and details]
+   Add: [Friend/colleague name and details]
    ```
 
 4. **Try searching:**
    ```
-   @Brain Show me everything I've added
+   Show me everything I've added
    ```
 
 That's it! Start capturing information and let the AI help you stay organized.
@@ -338,12 +355,20 @@ Talk to the **@Brain** agent naturally. It's designed to be helpful and guide yo
 
 Examples:
 ```
-@Brain How do I add a new area of responsibility?
+How do I add a new area of responsibility?
 
-@Brain Can you explain the difference between Projects and Areas?
+Can you explain the difference between Projects and Areas?
 
-@Brain Show me an example of a well-organized note
+Show me an example of a well-organized note
 ```
+
+If you are not in Brain mode (for example if you are in Ask mode), you can still access Brain by prefixing the command with @Brain
+
+```
+@Brain What if comfortable shoes could be made of celery
+```
+
+It would add a new idea to the brain for comfortable shoes made of celery
 
 ---
 
@@ -406,7 +431,7 @@ Both scripts will:
 
 - **Version**: 1.0
 - **Created**: June 2026
-- **Method**: PARA (People, Projects, Areas, Resources, Archives)
+- **Method**: PARA (People, Projects, Areas, Resources, Ideas, Archives)
 - **AI Agents**: Brain, Classifier, Organizer, Search
 - **File Format**: Markdown (.md) with YAML frontmatter
 - **Agent Configuration**: [.github/agents/](.github/agents/)
