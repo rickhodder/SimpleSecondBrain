@@ -67,7 +67,20 @@ This is your personal second brain - a place to capture, organize, and retrieve 
 - Used for debugging and understanding usage patterns
 
 ---
+## Suggested VS Code Extension to Use With Simple Second Brain
 
+The VS Code Speech extension is a really useful extension that adds voice imput to VS Code, and the Github Chat window.
+
+It has text-to-speech, speech to text, does not require an internet connection, and it processes all audio data locally.
+
+Interact with your second brain by just speaking to it! This is great for inline updates, github chat, and even just dictating information into text files. 
+
+It's put out by Microsoft, it's free, and I highly recommend it to anyone using VS Code!
+
+
+![Show  ](vs-code-speech.png)
+
+---
 ## How to Activate it the First Time You Use It
 
 This simple second brain was designed as a VS Code Custom Agent (https://code.visualstudio.com/docs/agent-customization/custom-agents)
